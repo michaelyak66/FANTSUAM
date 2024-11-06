@@ -15,8 +15,8 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
   font-size: 16px;
-  background: #fff;
-  color: #848484;
+  background: #000;
+  color: #fff;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -36,14 +36,14 @@ a:hover {
 }
 
 p, ul, ol {
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   font-size: 16px;
-  color: #848484;
+  color: #fff;
   font-family: "Open Sans", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #5a5a5a;
+  color: #fff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -67,6 +67,49 @@ figure {
   color: #fcfcfc;
   background: #008d37;
 }
+
+.quick-links {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  width: 300px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.quick-links h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.quick-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.quick-links ul li a:hover {
+  text-decoration: underline;
+}
+
 
 #fh5co-header {
   position: relative;
@@ -156,7 +199,7 @@ figure {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -258,19 +301,20 @@ figure {
   box-shadow: none;
   border: transparent;
   min-width: 12em;
-  *width: 12em;
+  width: 12em;
 }
 
 .sf-menu a {
-  color: rgba(0, 0, 0, 0.5);
+  color: #000;
   padding: 0.75em 1em !important;
-  font-weight: normal;
+  font-weight: 700;
   border-left: none;
   border-top: none;
   border-top: none;
+  word-spacing: 5px;
   text-decoration: none;
   zoom: 1;
-  font-size: 16px;
+  font-size: 20px;
   border-bottom: none !important;
 }
 .sf-menu a:hover, .sf-menu a:focus {
@@ -380,7 +424,7 @@ figure {
   z-index: 2; /* Ensures text is above the overlay */
 }
 
-/* #fh5co-logo {
+#fh5co-logo {
   position: relative;
   z-index: 2;
   font-size: 22px;
@@ -388,14 +432,16 @@ figure {
   margin-top: 35px;
   font-weight: 700;
   float: left;
-} */
-#fh5co-logo {
-  display: flex;            /* Use flexbox to align elements */
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  height: 14vh;             /* Full viewport height to center vertically */
-  text-align: center;        /* Center text if there's any */
 }
+
+ /*
+#fh5co-logo {
+  display: flex;            /* Use flexbox to align elements 
+  justify-content: center;   /* Center horizontally 
+  align-items: center;       /* Center vertically 
+  height: 14vh;             /* Full viewport height to center vertically 
+  text-align: center;        /* Center text if there's any 
+} */
 
 #fh5co-logo span {
   font-weight: 700;
@@ -404,7 +450,7 @@ figure {
   #fh5co-logo {
     width: 100%;
     float: none;
-    text-align: center;
+    text-align: left;
   }
 }
 #fh5co-logo a {
@@ -419,7 +465,7 @@ figure {
   z-index: 2;
   display: block;
   float: right;
-  margin-top: 15px;
+  margin-top: 2.2em;
 }
 #fh5co-menu-wrap .sf-menu a {
   padding: 1em .75em;
@@ -555,7 +601,7 @@ figure {
 #fh5co-work-section_2,
 #fh5co-blog-section,
 #fh5co-features {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-work-section,
@@ -574,7 +620,7 @@ figure {
 
 .heading-section {
   padding-bottom: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .heading-section:after {
   position: absolute;
@@ -600,7 +646,7 @@ figure {
   font-size: 14px;
   margin-bottom: 10px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   letter-spacing: .2em;
 }
 .feature-text h3 .number {
@@ -706,7 +752,7 @@ figure {
 }
 
 #fh5co-portfolio {
-  padding: 7em 0;
+  padding: 2em 0;
   min-height: 500px;
 }
 @media screen and (max-width: 768px) {
@@ -897,11 +943,11 @@ figure {
 }
 
 #fh5co-feature-product {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 
 #fh5co-services, #fh5co-about, #fh5co-contact {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-services, #fh5co-about, #fh5co-contact {
@@ -1122,7 +1168,7 @@ figure {
 }
 
 #fh5co-start-project-section {
-  padding: 7em 0;
+  padding: 2em 0;
   background: #F64E8B;
 }
 #fh5co-start-project-section h2 {
@@ -1394,12 +1440,18 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
-    display: none;
+    display: block;
     top: 0px;
     margin-top: 2em;
   }
 }
 
+
+@media screen and (max-width: 768px) {
+  .view {
+    display: none; 
+  }
+}
 @media screen and (max-width: 480px) {
   .col-xxs-12 {
     float: none;
@@ -1408,7 +1460,7 @@ figure {
 }
 
 .row-bottom-padded-lg {
-  padding-bottom: 7em;
+  padding-bottom: 2em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-lg {
@@ -1417,7 +1469,7 @@ figure {
 }
 
 .row-top-padded-lg {
-  padding-top: 7em;
+  padding-top: 2em;
 }
 @media screen and (max-width: 768px) {
   .row-top-padded-lg {
@@ -1426,7 +1478,7 @@ figure {
 }
 
 .row-bottom-padded-md {
-  padding-bottom: 4em;
+  padding-bottom: 1em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-md {
